@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: Cormorant;
-        background-color: rgb(220, 213, 206);
-        text-align: center;
-    }
-    h1 {
-        font-family: "DM Sans"
-    }
-    div.article-title {
-        font-family: "Cormorant", serif;
-        font-optical-sizing: auto;
-        font-size: x-large;
-        font-weight: bold;
-        font-style: normal;
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ribeye&display=swap" rel="stylesheet">
 
-    }
-</style>
+    <style>
+        body {
+            font-family: Cormorant;
+            text-align: center;
+        }
+
+        div.title {
+            font-family: "Ribeye"
+        }
+
+        div.article-box {
+            background-color: #DAE9EF;
+            border-radius: 8px;
+        }
+
+        div.article-title {
+            font-family: "Cormorant", serif;
+            font-optical-sizing: auto;
+            font-size: x-large;
+            font-weight: bold;
+            font-style: normal;
+
+        }
+
+
+    </style>
 </head>
+
 <body>
-    <h1>Read that!</h1>
+    <div class="title">Read that!</div>
     <h2>Curated manually and served once a day</h2>
 
     <h3>Today's short read:</h3>
 
-    <div class="article-title">
-        The Torturous History of the Treadmill
-    </div>
-    
-    <div class="article-description">
-        Popular home-exercise device or implement of torture? In the case of the home treadmill, it’s both. We explore the machine’s dark past and brighter future.
-    </div>
+    <div class="article-box">
 
-    <div class="article-link">
-        https://www.nytimes.com/wirecutter/blog/history-of-the-treadmill/
+        <div class="article-title">
+            The Torturous History of the Treadmill
+        </div>
+
+        <div class="article-description">
+            Popular home-exercise device or implement of torture? In the case of the home treadmill, it’s both. We
+            explore the machine’s dark past and brighter future.
+        </div>
+
+        <div class="article-link">
+            https://www.nytimes.com/wirecutter/blog/history-of-the-treadmill/
+        </div>
     </div>
 </body>
+
 </html>
