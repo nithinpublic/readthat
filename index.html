@@ -17,7 +17,14 @@
         }
 
         div.title {
-            font-family: "Ribeye"
+            font-family: "Ribeye";
+            font-size: 32px;
+            
+        }
+        div.subtitle {
+            font-family: sans-serif;
+            font-size: 16px;
+
         }
 
         div.article-box {
@@ -26,12 +33,14 @@
             width: 400px;
             margin: auto;
             padding: 32px;
+            box-shadow: #000000;
+            box-shadow: 4px 19px 16.7px -13px rgba(29,20,94,0.2);
         }
 
         div.article-title {
             font-family: "Cormorant", serif;
             font-optical-sizing: auto;
-            font-size: x-large;
+            font-size: 48px;
             font-weight: bold;
             font-style: normal;
 
@@ -43,7 +52,7 @@
 
 <body>
     <div class="title">Read that!</div>
-    <h2>Curated manually and served once a day</h2>
+    <div class="subtitle">Curated manually and served once a day</div>
 
     <h3>Today's short read:</h3>
 
@@ -59,7 +68,9 @@
         </div>
 
         <div class="article-link">
+            <a href="https://www.nytimes.com/wirecutter/blog/history-of-the-treadmill/">
             https://www.nytimes.com/wirecutter/blog/history-of-the-treadmill/
+        </a>
         </div>
     </div>
 </body>
