@@ -4,19 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Knowledge and insightful reads">
+    <meta name="description"
+        content="Read something today. This app delvers a short 5 minute read on Knowledge and insightful stuff from the internet.">
     <title>Read That</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Ribeye&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Ribeye&display=swap"
         rel="stylesheet">
 
     <style>
+        :root {
+            --background-color: #394242;
+            --card-color: #B4D8D7;
+            --foreground-text-color: #778C8B;
+            --text-color: #222222;
+
+        }
+
         body {
             font-family: "DM Sans", sans-serif;
             text-align: center;
+            background-color: var(--background-color);
         }
 
         div.title-image img {
@@ -25,41 +35,50 @@
         }
 
         div.title {
-            font-family: "Ribeye", serif;
+            font-family: "Mali", sans-serif;
             font-size: 32px;
+            color: var(--foreground-text-color);
             margin-top: 4px;
 
         }
 
         div.subtitle {
             font-family: "DM Sans", sans-serif;
-            font-size: 16px;
+            font-size: 12px;
+            color: var(--foreground-text-color);
             margin-top: 8px;
 
         }
 
-        div.info {
+        div.today {
             font-family: "DM Sans", sans-serif;
             font-size: 12px;
-            color: #999999;
+            color: var(--card-color);
+
             margin-top: 32px;
             margin-bottom: 8px;
         }
 
-        div.article-box {
-            background-color: #F5E5C3;
-            border-radius: 8px;
-
-            
-
+        div.article-card {
+            background-color: var(--card-color);
             max-width: 300px;
             margin: auto;
-            padding: 16px;
+            padding: 24px;
             box-shadow: #000000;
-            box-shadow: 4px 19px 16.7px -13px #D89E51;
-            /* border generated using: https://kovart.github.io/dashed-border-generator/ */
-            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='black' stroke-width='3' stroke-dasharray='6%2c 12%2c 18%2c 24' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
-            border-radius: 16px;
+            box-shadow: 4px 19px 16.7px -13px rgba(0, 1, 85, 0.3);
+            border: rgba(255, 255, 255, 0.4);
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 32px;
+            color: var(--text-color);
+
+        }
+
+        div.big-arrow {
+            width: 32px;
+            margin-left: auto;
+            margin-right: 0;
+            
         }
 
         div.article-title {
@@ -68,14 +87,25 @@
             font-size: xx-large;
             font-weight: 400;
             font-style: normal;
-            margin-top: 16px;
+            text-transform: uppercase;
+            margin-top: 24px;
+            text-align: left;
 
+
+        }
+
+        div.article-time {
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            margin-top: 8px;
+            text-align: left;
         }
 
         div.article-description {
             font-family: "DM Sans", sans-serif;
             font-size: 12px;
-            margin-top: 16px;
+            margin-top: 8px;
+            text-align: left;
 
         }
 
@@ -83,28 +113,33 @@
             font-family: "DM Sans", sans-serif;
 
             font-size: 8px;
-            margin-top: 16px;
+            margin-top: 8px;
+            text-align: left;
 
         }
 
         a {
-            color: #000000;
+            color: var(--text-color);
         }
     </style>
 </head>
 
 <body>
     <div class="title-image"><img src="images/bread_icon.png" alt=""></div>
-    <div class="title">Read That!</div>
-    <div class="subtitle">Your loaf of short reads, served once a day</div>
+    <div class="title">readthat</div>
 
-    <div class="info">Today's read:</div>
+    <div class="today">Today</div>
 
-    <div class="article-box" onclick="location.href='https://www.nytimes.com/wirecutter/blog/history-of-the-treadmill/';" style="cursor: pointer;">
+    <div class="article-card"
+        onclick="location.href='https://www.nytimes.com/wirecutter/blog/history-of-the-treadmill/';"
+        style="cursor: pointer;">
+
+        <div class="big-arrow"><img src="images/big_arrow.svg" alt=""></div>
 
         <div class="article-title">
             The Torturous History of the Treadmill
         </div>
+        <div class="article-time">5 min</div>
 
         <div class="article-description">
             Popular home-exercise device or implement of torture? In the case of the home treadmill, it’s both. We
@@ -116,8 +151,9 @@
                 https://www.nytimes.com/wirecutter/blog/history-of-the-treadmill/
             </a>
         </div>
-        <div class="info">Around 5 min to read</div>
     </div>
+    <div class="subtitle">Your loaf of short reads, served once a day</div>
+
 </body>
 
 </html>
