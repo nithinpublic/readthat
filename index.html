@@ -31,6 +31,7 @@
             margin: 0;
             padding-left: 29px;
             padding-right: 29px;
+
         }
 
         div.title-image img {
@@ -43,6 +44,7 @@
             font-size: 24px;
             color: var(--foreground-text-color);
             margin-top: 8px;
+
 
 
         }
@@ -146,9 +148,10 @@
 </head>
 
 
-
 <body>
+
     <div class="title-image"><img src="images/bread_icon.png" alt=""></div>
+
     <div class="title">read & butter</div>
 
     <div class="today" id="today">Today</div>
@@ -162,6 +165,7 @@
         <div class="article-title">
             WHY EVER STOP PLAYING VIDEO GAMES
         </div>
+
         <div class="article-time">
             <span><img src="images/clock.svg" alt=""></span>
             <span>40 min</span>
@@ -178,16 +182,21 @@
                 </a></span>
         </div>
     </div>
+    
     <div class="subtitle">Interesting slices to read, toasted once a day</div>
-
+    <script type="text/javascript" src="js/parser.js"></script>
 </body>
+
+
 <script>
     // Get current date and time
     var now = new Date();
     var datetime = now.toDateString().substring(0, 3).concat(",", now.toDateString().substring(3, 10));
 
     // Insert date and time into HTML
-    document.getElementById("today").innerHTML = datetime;
+    //document.getElementById("today").innerHTML = datetime;
 </script>
+
+
 
 </html>
