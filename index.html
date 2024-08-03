@@ -162,7 +162,7 @@
 
         <div class="big-arrow"><img src="images/big_arrow.svg" alt=""></div>
 
-        <div class="article-title">
+        <div class="article-title" id="article-title">
             WHY EVER STOP PLAYING VIDEO GAMES
         </div>
 
@@ -171,7 +171,7 @@
             <span>40 min</span>
         </div>
 
-        <div class="article-description">
+        <div class="article-description" id="article-description">
             Many Americans have replaced work hours with game play — and Ended up happier. Which wouldn’t surprise most
             gamers. By Frank Guan
         </div>
@@ -194,7 +194,7 @@
     var datetime = now.toDateString().substring(0, 3).concat(",", now.toDateString().substring(3, 10));
 
     // Insert date and time into HTML
-    //document.getElementById("today").innerHTML = datetime;
+    document.getElementById("today").innerHTML = datetime;
 </script>
 
 
