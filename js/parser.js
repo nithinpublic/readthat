@@ -28,7 +28,11 @@ function write_card(data) {
 
 
         imageURL = String("url(\"" + (data[index].image).toString() + "\")")
-        document.getElementById("article-pic").style.backgroundImage = imageURL;
+        gradientOverlay = "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%)"
+        combinedImageGradientOverlay = String(gradientOverlay+","+imageURL)
+        document.getElementById("article-pic").style.backgroundImage = combinedImageGradientOverlay;
+        
+        //document.getElementById("article-pic").style.background = linear-gradient(to bottom, #000000 1%,#303030 10%);
     }
 
     console.log(day_of_the_year())
