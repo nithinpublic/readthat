@@ -114,6 +114,14 @@
 
         }
 
+        #article-time-icon {
+            background: url("images/clock_icon.png");
+            background-size: contain;
+            height: 16px;
+            width: 16px;
+
+        }
+
         div.article-time {
             font-family: "Noto Sans", sans-serif;
             font-size: 12px;
@@ -133,7 +141,7 @@
 
         }
 
-        div.article-link {
+        div.article-source {
             font-family: "Noto Sans", sans-serif;
 
             font-size: 8px;
@@ -143,6 +151,15 @@
             display: flex;
             align-items: center;
 
+        }
+        #article-source-icon {
+            background: url("images/globe_icon.png");
+            background-size: contain;
+            border-radius: 8px;
+
+            height: 16px;
+            width: 16px;
+            
         }
 
         span+span {
@@ -189,7 +206,7 @@
         </div>
 
         <div class="article-time">
-            <span><img src="images/clock.svg" alt=""></span>
+            <span id="article-time-icon"></span>
             <span>40 min</span>
         </div>
 
@@ -198,10 +215,11 @@
             gamers. By Frank Guan
         </div>
 
-        <div class="article-link"><span><img src="images/link.svg" alt=""></span>
-            <span><a href="https://www.vulture.com/2017/02/video-games-are-better-than-real-life.html">
-                    https://www.vulture.com/2017/02/video-games-are-better-than-real-life.html
-                </a></span>
+        <div class="article-source">
+            <span id="article-source-icon"></span>
+            <span id="article-source-name">
+                Source of this article
+            </span>
         </div>
     </div>
     

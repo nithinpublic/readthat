@@ -2,7 +2,7 @@ console.clear();
 
 
 
-fetch("csv/monday_list_computers.json")
+fetch("csv/monday_list.json")
     .then(response => {
         if (response.ok) {
             console.log("Success")
@@ -24,7 +24,7 @@ function write_card(data) {
     document.getElementById("article-title").innerHTML = data[index].title;
     document.getElementById("article-description").innerHTML = data[index].description;
 
-    if (data[index].image != "#N/A") {
+    if (data[index].image.startsWith("http",0)) {
 
 
         imageURL = String("url(\"" + (data[index].image).toString() + "\")")
@@ -32,8 +32,18 @@ function write_card(data) {
         combinedImageGradientOverlay = String(gradientOverlay+","+imageURL)
         document.getElementById("article-pic").style.backgroundImage = combinedImageGradientOverlay;
         
-        //document.getElementById("article-pic").style.background = linear-gradient(to bottom, #000000 1%,#303030 10%);
     }
+
+    if (data[index].sourcelogo.startsWith("http",0)) {
+
+
+        sourceLogoURL = String("url(\"" + (data[index].sourcelogo).toString() + "\")")
+        document.getElementById("article-source-icon").style.backgroundImage = sourceLogoURL;
+        
+        
+    }
+
+    document.getElementById("article-source-name").innerHTML = extractDomain(data[index].link)
 
     console.log(day_of_the_year())
 }
@@ -41,9 +51,13 @@ function write_card(data) {
 function day_of_the_year() {
     today = new Date()
 
-    const offset = 217 // this is to adjust to the fact that I'm starting this today (3 August 2024) hehe
+    const offset = 216 // this is to adjust to the fact that I'm starting this today (3 August 2024) hehe
 
     dayIntoYear = (Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - Date.UTC(today.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
     return dayIntoYear - offset;
 }
+
+function extractDomain(url) {
+    return url.replace(/^(?:https?:\/\/)?(?:[^\/]+\.)?([^.\/]+\.[^.\/]+).*$/, "https://www.$1");
+  }
 
