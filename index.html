@@ -21,15 +21,21 @@
             --background-color: #C0CECD;
             --background-gradient: linear-gradient(to bottom, rgba(255,169,150,1) 0%,rgba(186,186,212,1) 50%,rgba(255,255,255,1) 100%);
             --card-color: #F0F0F0;
+            --card-gradient: linear-gradient(to right, #ffffff 0%,#eeeeee 50%,#ffffff 100%);
             --foreground-text-color: #3F4D4D;
             --text-color: #222222;
+
+        }
+
+        html, body {
+            height: 100%;
 
         }
 
         body {
             text-align: center;
             background: var(--background-gradient);
-            background-repeat: no-repeat;
+            
             margin: 0;
             padding-left: 29px;
             padding-right: 29px;
@@ -62,17 +68,19 @@
         }
 
         .article-card {
-            background-color: var(--card-color);
+            /*background-color: var(--card-color);*/
+            background: var(--card-gradient);
+            background-repeat: no-repeat;
             max-width: 300px;
             margin: auto;
             padding: 24px;
             /*should be 24px*/
 
             /*box-shadow: 4px 19px 9.9px -13px rgba(12, 33, 59, 0.4);*/
-            border: rgba(255, 255, 255, 0.4);
+            border: rgba(255, 255, 255, 1.0);
 
             border-style: solid;
-            border-width: 2px;
+            border-width: 0.5px;
             /*should be 2px*/
             border-radius: 37px;
             /*should be 37px*/
