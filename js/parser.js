@@ -98,4 +98,5 @@ function extractDomain(url) {
     });
   } else {
     console.warn('Web Share API not supported on this browser');
+    //raise a toast with link copied to clipboard
   }
