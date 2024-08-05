@@ -82,7 +82,7 @@ function extractDomain(url) {
 
   if (navigator.share) {
     const shareButton = document.getElementById('share-button');
-  
+  shareButton.innerHTML = "adjhgjgjasds";
     shareButton.addEventListener('click', async () => {
       try {
         // Use the Web Share API to trigger the native sharing dialog

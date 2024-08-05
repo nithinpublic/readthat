@@ -17,7 +17,6 @@
         rel="stylesheet">
 
     <style>
-        
         :root {
             --background-color: #C0CECD;
             --card-color: #F0F0F0;
@@ -64,14 +63,17 @@
             background-color: var(--card-color);
             max-width: 300px;
             margin: auto;
-            padding: 24px; /*should be 24px*/
+            padding: 24px;
+            /*should be 24px*/
 
             box-shadow: 4px 19px 9.9px -13px rgba(12, 33, 59, 0.4);
             border: rgba(255, 255, 255, 0.4);
 
             border-style: solid;
-            border-width: 2px; /*should be 2px*/
-            border-radius: 37px; /*should be 37px*/
+            border-width: 2px;
+            /*should be 2px*/
+            border-radius: 37px;
+            /*should be 37px*/
             color: var(--text-color);
 
 
@@ -83,7 +85,7 @@
             background-size: cover;
             background-position: center;
 
-            height: 160px; 
+            height: 160px;
             border-radius: 18px;
         }
 
@@ -172,8 +174,9 @@
 
         .article-actions {
             margin-left: auto;
-            margin-bottom: -4px; /*dont know why there was a gap there*/
-            
+            margin-bottom: -4px;
+            /*dont know why there was a gap there*/
+
         }
 
         .article-action-buttons {
@@ -189,7 +192,7 @@
             background-size: 16px, 16px;
             background-repeat: no-repeat;
             background-position: center;
-            
+
         }
 
         #bookmark-button {
@@ -197,7 +200,7 @@
             background-size: 16px, 16px;
             background-repeat: no-repeat;
             background-position: center;
-            
+
         }
     </style>
 
@@ -213,29 +216,31 @@
 
     <div class="today" id="today">Today</div>
 
-    <div class="article-card" id="clickable-area"
+    <div class="article-card">
+        <div id="clickable-area"
         onclick="location.href='https://www.vulture.com/2017/02/video-games-are-better-than-real-life.html';"
         style="cursor: pointer;">
+            <div class="article-pic" id="article-pic">
+                <div class="big-arrow"><img src="images/big_arrow.svg" alt=""></div>
 
-        <div class="article-pic" id="article-pic">
-            <div class="big-arrow"><img src="images/big_arrow.svg" alt=""></div>
-
-        </div>
-
+            </div>
 
 
-        <div class="article-title" id="article-title">
-            WHY EVER STOP PLAYING VIDEO GAMES
-        </div>
 
-        <div class="article-time">
-            <span id="article-time-icon"></span>
-            <span>40 min</span>
-        </div>
+            <div class="article-title" id="article-title">
+                WHY EVER STOP PLAYING VIDEO GAMES
+            </div>
 
-        <div class="article-description" id="article-description">
-            Many Americans have replaced work hours with game play — and Ended up happier. Which wouldn’t surprise most
-            gamers. By Frank Guan
+            <div class="article-time">
+                <span id="article-time-icon"></span>
+                <span>40 min</span>
+            </div>
+
+            <div class="article-description" id="article-description">
+                Many Americans have replaced work hours with game play — and Ended up happier. Which wouldn’t surprise
+                most
+                gamers. By Frank Guan
+            </div>
         </div>
 
         <div class="article-source">
