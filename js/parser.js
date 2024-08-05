@@ -19,6 +19,16 @@ fetch("csv/monday_list.json")
     })
 
 function write_card(data) {
+
+    //dev tool stuff  -----
+    document.getElementById("dev-tool-clicker").addEventListener("click", function(event){
+        offset = offset - 1;
+        write_card(data)
+        console.log(offset)
+    }, {once : true});
+
+
+
     console.log("writing card", data)
     index = day_of_the_year()
     document.getElementById("article-title").innerHTML = data[index].title;
@@ -43,6 +53,8 @@ function write_card(data) {
         document.getElementById("article-source-icon").style.backgroundImage = sourceLogoURL;
         
         
+    } else {
+        document.getElementById("article-source-icon").style.backgroundImage = "url(images/globe_icon.png)";
     }
 
     document.getElementById("article-source-name").innerHTML = extractDomain(data[index].link)
@@ -53,11 +65,12 @@ function write_card(data) {
     })
 
 }
+var offset = 218 // change this to const and put it inside the day_of_the_year function when removing the dev-tool-clicker
 
 function day_of_the_year() {
     today = new Date()
 
-    const offset = 217 // this is to adjust to the fact that I'm starting this today (3 August 2024) hehe
+     // this is to adjust to the fact that I'm starting this today (3 August 2024) hehe
     dayIntoYear = (Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - Date.UTC(today.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
     console.log(dayIntoYear)
     return dayIntoYear - offset;
