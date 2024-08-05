@@ -17,6 +17,7 @@
         rel="stylesheet">
 
     <style>
+        
         :root {
             --background-color: #C0CECD;
             --card-color: #F0F0F0;
@@ -63,15 +64,16 @@
             background-color: var(--card-color);
             max-width: 300px;
             margin: auto;
-            padding: 24px;
+            padding: 24px; /*should be 24px*/
 
             box-shadow: 4px 19px 9.9px -13px rgba(12, 33, 59, 0.4);
             border: rgba(255, 255, 255, 0.4);
 
             border-style: solid;
-            border-width: 2px;
-            border-radius: 37px;
+            border-width: 2px; /*should be 2px*/
+            border-radius: 37px; /*should be 37px*/
             color: var(--text-color);
+
 
 
         }
@@ -170,6 +172,8 @@
 
         .article-actions {
             margin-left: auto;
+            margin-bottom: -4px; /*dont know why there was a gap there*/
+            
         }
 
         .article-action-buttons {

@@ -80,3 +80,23 @@ function extractDomain(url) {
     return url.replace(/^(?:https?:\/\/)?(?:[^\/]+\.)?([^.\/]+\.[^.\/]+).*$/, "https://www.$1");
   }
 
+  if (navigator.share) {
+    const shareButton = document.getElementById('share-button');
+  
+    shareButton.addEventListener('click', async () => {
+      try {
+        // Use the Web Share API to trigger the native sharing dialog
+        await navigator.share({
+          title: 'Share Example',
+          text: 'Check out this awesome content!',
+          url: window.location.href
+        });
+  
+        console.log('Shared successfully');
+      } catch (error) {
+        console.error('Error sharing:', error.message);
+      }
+    });
+  } else {
+    console.warn('Web Share API not supported on this browser');
+  }
