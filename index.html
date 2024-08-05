@@ -81,7 +81,7 @@
             background-size: cover;
             background-position: center;
 
-            height: 224px;
+            height: 160px; 
             border-radius: 18px;
         }
 
@@ -171,6 +171,30 @@
         .article-actions {
             margin-left: auto;
         }
+
+        .article-action-buttons {
+            display: inline-block;
+            background: var(--text-color);
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+        }
+
+        #share-button {
+            background-image: url('images/share_icon.png');
+            background-size: 16px, 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+
+        #bookmark-button {
+            background-image: url('images/bookmark_icon.png');
+            background-size: 16px, 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
     </style>
 
 </head>
@@ -215,7 +239,10 @@
             <span id="article-source-name">
                 Source of this article
             </span>
-            <div class="article-actions">Share Bookmark</div>
+            <div class="article-actions">
+                <span class="article-action-buttons" id="share-button"></span>
+                <span class="article-action-buttons" id="bookmark-button"></span>
+            </div>
         </div>
     </div>
 
