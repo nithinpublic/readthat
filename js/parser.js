@@ -47,13 +47,17 @@ function write_card(data) {
 
     document.getElementById("article-source-name").innerHTML = extractDomain(data[index].link)
 
-    console.log(day_of_the_year())
+    //document.getElementById("clickable-area").setAttribute("onclick","location.href='www.yahoo.com';")
+    document.getElementById("clickable-area").addEventListener("click", function (event) {
+        document.location = data[index].link;
+    })
+
 }
 
 function day_of_the_year() {
     today = new Date()
 
-    const offset = 218 // this is to adjust to the fact that I'm starting this today (3 August 2024) hehe
+    const offset = 217 // this is to adjust to the fact that I'm starting this today (3 August 2024) hehe
     dayIntoYear = (Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - Date.UTC(today.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
     console.log(dayIntoYear)
     return dayIntoYear - offset;
