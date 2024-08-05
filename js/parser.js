@@ -32,6 +32,8 @@ function write_card(data) {
         combinedImageGradientOverlay = String(gradientOverlay+","+imageURL)
         document.getElementById("article-pic").style.backgroundImage = combinedImageGradientOverlay;
         
+    } else {
+        document.getElementById("article-pic").style.backgroundImage = "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%), url('images/no_image.png')";
     }
 
     if (data[index].sourcelogo.startsWith("http",0)) {
@@ -51,9 +53,9 @@ function write_card(data) {
 function day_of_the_year() {
     today = new Date()
 
-    const offset = 216 // this is to adjust to the fact that I'm starting this today (3 August 2024) hehe
-
+    const offset = 218 // this is to adjust to the fact that I'm starting this today (3 August 2024) hehe
     dayIntoYear = (Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - Date.UTC(today.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
+    console.log(dayIntoYear)
     return dayIntoYear - offset;
 }
 
