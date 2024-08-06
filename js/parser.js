@@ -65,7 +65,7 @@ function write_card(data) {
     })
 
 }
-var offset = 218 // change this to const and put it inside the day_of_the_year function when removing the dev-tool-clicker
+var offset = 212 // change this to const and put it inside the day_of_the_year function when removing the dev-tool-clicker
 
 function day_of_the_year() {
     today = new Date()
