@@ -6,6 +6,9 @@ function fetch_and_fill_card() {
     console.clear();
     console.log("Fetching")
 
+
+    //need to set up the logic for fetching the write json bases on day of the week
+
     fetch("csv/monday_list.json")
         .then(response => {
             if (response.ok) {
@@ -115,7 +118,7 @@ function setup_share_button(titleToShare, linkToShare){
         });
     } else {
         console.warn('Web Share API not supported on this browser');
-        //raise a toast with link copied to clipboard
+        //change icon to copy-icon and raise a toast with link copied to clipboard on clicking
     }
 
 }
