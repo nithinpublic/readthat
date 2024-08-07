@@ -107,7 +107,7 @@ function setup_share_button(titleToShare, linkToShare){
                 // Use the Web Share API to trigger the native sharing dialog
                 await navigator.share({
                     title: titleToShare,
-                    text: 'Shared via https://www.readtoast.com',
+                    text: 'Shared via Read & Crumb',
                     url: linkToShare
                 });
     
