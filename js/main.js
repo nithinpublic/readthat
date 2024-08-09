@@ -1,42 +1,59 @@
 //© Nithin Davis Nanthikkara
 
-document.onload = fetch_and_fill_card();
+document.onload = populate_card();
 
-function fetch_and_fill_card() {
+function populate_card() {
     console.clear();
 
+    //File paths for different days lists
+    const monday_list = "csv/monday_list.json"
+    const tuesday_list = "csv/tuesday_list.json"
+    const wednesday_list = "csv/wednesday_list.json"
+    const thursday_list = "csv/thursday_list.json"
+    const friday_list = "csv/friday_list.json"
+    const saturday_list = "csv/saturday_list.json"
+    const sunday_list = "csv/sunday_list.json"
+
+    //Select list based on the day of the week.
     switch (new Date().getDay()) {
         case 0:
             console.log("Its a Sunday");
+            fetch_and_write(sunday_list)
             break;
         case 1:
             console.log("Its a Monday");
+            fetch_and_write(monday_list)
             break;
         case 2:
             console.log("Its a Tuesday");
+            fetch_and_write(tuesday_list)
             break;
         case 3:
             console.log("Its a Wednesday");
+            fetch_and_write(wednesday_list)
             break;
         case 4:
             console.log("Its a Thursday");
+            fetch_and_write(monday_list)
             break;
         case 5:
             console.log("Its a Friday");
+            fetch_and_write(friday_list)
             break;
         case 6:
             console.log("Its a Saturday");
+            fetch_and_write(saturday_list)
             break;
 
     }
 
 
-    console.log("Fetching data...")
 
+}
 
-    //need to set up the logic for fetching the write json bases on day of the week
-
-    fetch("csv/monday_list.json")
+function fetch_and_write(jsonFilePath){
+    console.log("Fetching data from,",jsonFilePath,"...")
+    fetch(jsonFilePath)
         .then(response => {
             if (response.ok) {
                 console.log("Success")
@@ -51,9 +68,7 @@ function fetch_and_fill_card() {
         .then(data => {
             write_card(data)
         })
-
 }
-
 
 
 
@@ -69,7 +84,8 @@ function write_card(data) {
 
 
     console.log("writing card with the following data: ", data)
-    index = day_of_the_year()
+    index = week_of_the_year(222);
+    console.log("Writing card with data index = ", index)
     document.getElementById("article-title").innerHTML = data[index].title;
     document.getElementById("article-description").innerHTML = data[index].description;
 
@@ -109,14 +125,7 @@ function write_card(data) {
 
 
 
-
-var offset = 213 // change this to const and put it inside the day_of_the_year function when removing the dev-tool-clicker
-
-
-
-
-
-function day_of_the_year() {
+function day_of_the_year(offset = 0) {
     today = new Date();
 
     // the offset is to adjust to the fact that I'm starting this today (3 August 2024) hehe
@@ -132,11 +141,11 @@ function week_of_the_year(fromThisDay = 0) {
     var start = new Date(now.getFullYear(), 0, 0);
     var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
     var oneDay = 1000 * 60 * 60 * 24;
-    var dayOfYear = Math.floor(diff / oneDay) - fromThisDay;
+    var dayOfYear = Math.abs(Math.floor(diff / oneDay) - fromThisDay);
     console.log('Day of year: ' + dayOfYear);
 
     //calculate week of the year
-    var weekOfYear = Math.floor(dayOfYear * (52 / 365)) + 1;
+    var weekOfYear = Math.floor(dayOfYear * (52 / 365));
     console.log("Week of the year with DST: " + (weekOfYear));
 
     return weekOfYear;
@@ -155,7 +164,7 @@ function setup_share_button(titleToShare, linkToShare) {
                 // Use the Web Share API to trigger the native sharing dialog
                 await navigator.share({
                     title: titleToShare,
-                    text: 'Shared via Read & Crumb',
+                    text: 'This article was featured on Readpghds',
                     url: linkToShare
                 });
 
