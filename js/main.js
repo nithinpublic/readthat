@@ -76,7 +76,7 @@ function write_card(data) {
 
     //dev tool stuff  -----
     document.getElementById("dev-tool-clicker").addEventListener("click", function (event) {
-        offset = offset - 1;
+        offset = offset - 7;
         write_card(data)
         console.log(offset)
     }, { once: true });
@@ -123,20 +123,15 @@ function write_card(data) {
 
 }
 
+var offset = 222;
 
 
-function day_of_the_year(offset = 0) {
-    today = new Date();
-
-    // the offset is to adjust to the fact that I'm starting this today (3 August 2024) hehe
-    dayIntoYear = (Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - Date.UTC(today.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
-    console.log(dayIntoYear);
-
-    return dayIntoYear - offset;
-
-}
 
 function week_of_the_year(fromThisDay = 0) {
+
+    fromThisDay = offset; // dev tool - delete later
+
+
     var now = new Date();
     var start = new Date(now.getFullYear(), 0, 0);
     var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
@@ -183,3 +178,16 @@ function setup_share_button(titleToShare, linkToShare) {
 
 
 
+/* Deleted stuff....
+function day_of_the_year(offset = 0) {
+    today = new Date();
+
+    // the offset is to adjust to the fact that I'm starting this today (3 August 2024) hehe
+    dayIntoYear = (Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - Date.UTC(today.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
+    console.log(dayIntoYear);
+
+    return dayIntoYear - offset;
+
+}
+
+*/
