@@ -6,13 +6,13 @@ function populate_card() {
     console.clear();
 
     //File paths for different days lists
-    const monday_list = "csv/monday_list.json"
-    const tuesday_list = "csv/tuesday_list.json"
-    const wednesday_list = "csv/wednesday_list.json"
-    const thursday_list = "csv/thursday_list.json"
-    const friday_list = "csv/friday_list.json"
-    const saturday_list = "csv/saturday_list.json"
-    const sunday_list = "csv/sunday_list.json"
+    const monday_list = "json/monday_list.json"
+    const tuesday_list = "json/tuesday_list.json"
+    const wednesday_list = "json/wednesday_list.json"
+    const thursday_list = "json/thursday_list.json"
+    const friday_list = "json/friday_list.json"
+    const saturday_list = "json/saturday_list.json"
+    const sunday_list = "json/sunday_list.json"
 
     //Select list based on the day of the week.
     switch (new Date().getDay()) {
@@ -93,12 +93,12 @@ function write_card(data) {
 
 
         imageURL = String("url(\"" + (data[index].image).toString() + "\")")
-        gradientOverlay = "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%)"
+        gradientOverlay = "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%)"
         combinedImageGradientOverlay = String(gradientOverlay + "," + imageURL)
         document.getElementById("article-pic").style.backgroundImage = combinedImageGradientOverlay;
 
     } else {
-        document.getElementById("article-pic").style.backgroundImage = "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%), url('images/no_image.png')";
+        document.getElementById("article-pic").style.backgroundImage = "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%), url('images/no_image.webp')";
     }
 
     if (data[index].sourcelogo.startsWith("http", 0)) {
