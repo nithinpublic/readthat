@@ -7,7 +7,7 @@ function populate_card() {
 
     //File paths for different days lists
     const monday_list = "json/monday_list.json"
-    const tuesday_list = "json/tuesday_list.json"
+    const tuesday_list = "json/monday_list.json"
     const wednesday_list = "json/wednesday_list.json"
     const thursday_list = "json/thursday_list.json"
     const friday_list = "json/friday_list.json"
