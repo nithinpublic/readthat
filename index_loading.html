@@ -51,7 +51,7 @@
         }
 
         .title-image img {
-            height: 48px;
+            height: 32px;
             margin-top: 48px;
         }
 
@@ -105,7 +105,7 @@
         }
 
         .article-title {
-            font-family: "Manolo-mono", serif;
+            font-family: "Manolo-mono", sans-serif;
             font-size: 32px;
             text-transform: uppercase;
             color: var(--text-color);
@@ -207,6 +207,13 @@
         .spacer {
             height: 128px;
         }
+
+        #toasting {
+            font-family: "Manolo-mono", "Noto Sans", sans-serif;
+            letter-spacing: 4px;
+            font-size: 16px;
+            
+        }
     </style>
 
 </head>
@@ -222,42 +229,7 @@
     <div class="today" id="today">Today</div>
 
     <div class="article-card">
-        <div id="clickable-area"
-            onclick="location.href='https://www.vulture.com/2017/02/video-games-are-better-than-real-life.html';"
-            style="cursor: pointer;">
-            <div class="article-pic" id="article-pic">
-                <div class="big-arrow"><img src="images/big_arrow.svg" alt=""></div>
-
-            </div>
-
-
-
-            <div class="article-title" id="article-title">
-                WHY EVER STOP PLAYING VIDEO GAMES
-            </div>
-
-            <div class="article-time">
-                <span id="article-time-icon"></span>
-                <span>25 min</span>
-            </div>
-
-            <div class="article-description" id="article-description">
-                Many Americans have replaced work hours with game play — and Ended up happier. Which wouldn’t surprise
-                most
-                gamers. By Frank Guan
-            </div>
-        </div>
-
-        <div class="article-source">
-            <span id="article-source-icon"></span>
-            <span id="article-source-name">
-                Source of this article
-            </span>
-            <div class="article-actions">
-                <span class="article-action-buttons" id="share-button"></span>
-                <span class="article-action-buttons" id="bookmark-button"></span>
-            </div>
-        </div>
+        <span id="toasting">Toasting . . .</span>
     </div>
 
     <div class="subtitle">A useful slice of read, toasted once a day</div>
