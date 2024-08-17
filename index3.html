@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffa996">
     <meta name="Copyright" content="Created by Nithin Davis Nanthikkara">
     <meta name="description"
         content="Read something useful today. This app delvers a short 5 minute read on Knowledge and insightful stuff from the internet.">
@@ -12,20 +12,28 @@
     <title>Read That</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Julius+Sans+One&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Odibee+Sans&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
             --background-color: #C0CECD;
             --background-gradient-previous: linear-gradient(to bottom, #BABAD4 0%,#FFFFFF 100%);
-            --background-gradient: linear-gradient(to bottom, #ffa996 0%,#babad4 50%,#ffffff 100%);
+            --background-gradient-pinkinsh: linear-gradient(to bottom, #ffa996 0%,#babad4 50%,#ffffff 100%);
+            --background-gradient: linear-gradient(to bottom, #ffffff 0%,#ebeff2 50%,#ffffff 100%);
             --card-color: #F0F0F0;
-            --card-gradient: linear-gradient(to right, #212122 0%,#19191a 50%,#212122 100%);
+            --card-gradient: linear-gradient(to right, #ffffff 0%,#f3f3f3 50%,#ffffff 100%);
             --foreground-text-color: #222222;
-            --text-color: #ffffff;
+            --text-color: #222222;
 
         }
+
+        @font-face {
+    font-family: 'Manolo-mono'; /*a name to be used later*/
+    src: url('fonts/manolo-mono.ttf'); /*URL to font*/
+}
 
         html, body {
             height: 100%;
@@ -34,12 +42,12 @@
 
         body {
             text-align: center;
-            background:  #ffffff;
+            background: var(--background-gradient), #ffffff;
             background-repeat: no-repeat;
             
             margin: 0;
-            padding-left: 29px;
-            padding-right: 29px;
+            padding-left: 25px;
+            padding-right: 25px;
 
             
 
@@ -73,15 +81,16 @@
         .article-card {
             /*background-color: var(--card-color);*/
             background: var(--card-gradient);
-            background-repeat: no-repeat;
+            background: url(images/card_texture.png);
+            background-repeat:repeat;
             max-width: 300px;
             min-width: 210px;
             margin: auto;
-            padding: 24px;
+            padding: 16px;
             /*should be 24px*/
 
-            /*box-shadow: 4px 19px 9.9px -13px rgba(12, 33, 59, 0.4);*/
-            border: rgb(227, 227, 240);
+            box-shadow: 4px 16px 30px -9px rgba(12, 0, 105, 0.2);
+            border: rgb(255, 255, 255);
 
             border-style: solid;
             border-width: 1px;
@@ -95,13 +104,15 @@
 
         }
 
+
         .article-pic {
             background: #000000;
             background-size: cover;
             background-position: center;
 
             height: 160px;
-            border-radius: 18px;
+            border-radius: 21px 21px 8px 8px;
+            
 
             
             filter: saturate(0.5);
@@ -118,20 +129,20 @@
         }
 
         .article-title {
-            font-family:"Noto Sans";
-            font-size: 36px;
-            font-weight: 100;
-            line-height: 110%;
-            
+            font-family: "Manolo-mono", serif;
+            font-size: 32px;
             text-transform: uppercase;
+            
+            
+            
 
             color: var(--text-color);
 
 
-            margin-top: 16px;
+            margin-top: 8px;
             text-align: left;
 
-            
+            text-shadow: 0px 1px 1px rgb(255, 255, 255);
         }
 
         #article-time-icon {
@@ -235,7 +246,7 @@
 
 
 <body>
-    <div id="dev-tool-clicker" style="font-size: 8px;color: #878e8e;">dev tool clicker >></div>
+    <div id="dev-tool-clicker" style="font-size: 8px;color: #ebebeb;">dev tool clicker >></div>
 
     <div class="title-image"><img src="images/bread_icon.png" alt=""></div>
 
