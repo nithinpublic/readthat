@@ -24,7 +24,7 @@
             --background-gradient-pinkinsh: linear-gradient(to bottom, #ffa996 0%,#babad4 50%,#ffffff 100%);
             --background-gradient: linear-gradient(to bottom, #ffffff 0%,#ebeff2 50%,#ffffff 100%);
             --card-color: #F0F0F0;
-            --card-gradient: linear-gradient(to right, #ffffff 0%,#f3f3f3 50%,#ffffff 100%);
+            --card-gradient: linear-gradient(to right, #ffffff00 0%,#f3f3f3c2 50%,#ffffff00 100%);
             --foreground-text-color: #222222;
             --text-color: #222222;
 
@@ -80,8 +80,9 @@
 
         .article-card {
             /*background-color: var(--card-color);*/
-            background: var(--card-gradient);
-            background: url(images/card_texture.png);
+            background-color: red;
+            background: var(--card-gradient), url(images/card_texture.png);
+            
             background-repeat:repeat;
             max-width: 300px;
             min-width: 210px;
