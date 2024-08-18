@@ -25,7 +25,6 @@
     body {
         height: 100%;
         overflow: hidden;
-        
     }
 
     body {
@@ -34,7 +33,7 @@
         align-items: center;
         margin: 0;
         color: #dee2e6;
-        background:none transparent;
+        background-color: #212529;
         font-family: 'Hind', sans-serif;
         text-transform: uppercase;
     }
@@ -70,13 +69,13 @@
         height: 80px;
         bottom: 10px;
         border: 0;
-        border-radius: 40px;
+        border-radius: 50%;
         color: inherit;
-        background-color: #222222;
+        background-color: #e64980;
         text-align: center;
         line-height: 80px;
         font-size: 1.25rem;
-        
+        text-transform: inherit;
         cursor: pointer;
         user-select: none;
         outline: none;
@@ -93,7 +92,7 @@
     canvas {
         overflow: hidden;
         border-radius: 5px;
-        /*box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75);*/
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75);
     }
 
     /* responsive scaling, because pinball tables are tall */
@@ -152,7 +151,7 @@
         };
         const COLOR = {
             BACKGROUND: '#212529',
-            OUTER: '#ffffff',
+            OUTER: '#495057',
             INNER: '#15aabf',
             BUMPER: '#fab005',
             BUMPER_LIT: '#fff3bf',

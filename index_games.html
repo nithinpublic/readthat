@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta name="Copyright" content="Created by Nithin Davis Nanthikkara">
     <meta name="description"
         content="Read something useful today. This app delvers a short 5 minute read on Knowledge and insightful stuff from the internet.">
@@ -39,6 +39,7 @@
         html,
         body {
             height: 100%;
+            user-select: none;
         }
 
         body {
@@ -214,6 +215,12 @@
             font-size: 16px;
             
         }
+
+
+        iframe {
+            border-radius: 21px;
+            
+        }
     </style>
 
 </head>
@@ -229,7 +236,9 @@
     <div class="today" id="today">Today</div>
 
     <div class="article-card">
-        <div><iframe src="pinball.html" frameborder="0" height="500" width="300"></iframe></div>
+        <div id="game-container">
+            <iframe src="pinball.html" frameborder="0" height="500" width="300" allowtransparency="true"></iframe>
+        </div>
         <div id="controller">
             <div id="left-button"></div>
             <div id="right-button"></div>
