@@ -7,7 +7,7 @@ function populate_card() {
 
     //File paths for different days lists
     const monday_list = "json/monday_list.json"
-    const tuesday_list = "json/monday_list.json"
+    const tuesday_list = "json/tuesday_list.json"
     const wednesday_list = "json/wednesday_list.json"
     const thursday_list = "json/thursday_list.json"
     const friday_list = "json/friday_list.json"
@@ -34,7 +34,7 @@ function populate_card() {
             break;
         case 4:
             console.log("Its a Thursday");
-            fetch_and_write(monday_list)
+            fetch_and_write(thursday_list)
             break;
         case 5:
             console.log("Its a Friday");
